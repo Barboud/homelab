@@ -32,7 +32,7 @@ I want to run many VMs on one machine.
 
 ## Known issues
 
-- Network drops, I can't connect to Proxmox → [incident](incidents/2026-11-13-e1000e-network-drop.md)
+- Server freezes, I can't connect to Proxmox → [incident](incidents/2026-11-13-server-freezes.md)
 
 ## VMs
 
