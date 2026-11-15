@@ -7,5 +7,5 @@ My home server: an HP EliteDesk mini PC running Proxmox.
 - [Plan](PLAN.md): what is done and what is next
 - [Hardware](docs/hardware.md): my machine
 - [Proxmox](docs/proxmox.md): the base system and my VMs
-- [Incidents](docs/incidents): problems I encounter them
+- [Incidents](docs/incidents): problems I encountered
 - [Labs](labs): labs I built and deleted

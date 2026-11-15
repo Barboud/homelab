@@ -28,12 +28,22 @@ I want to run many VMs on one machine.
 
 ### Why the name `pve.home.arpa`
 
-
+I can use any hostname, like `homelab.company.com`. I think that is what companies do in real life: they use their own domain, but with network traffic restrictions of course. The problem is, if the hostname matches an existing domain name, I can't open my local Proxmox server. That is why I use `.arpa`: it is reserved, and no one can register it, so it will never match a real domain. It works locally even if someone else has the same hostname, because every server runs locally, not in public.
 
 ## Known issues
 
-- Server freezes, I can't connect to Proxmox → [incident](incidents/2026-11-13-server-freezes.md)
+- Server freezes, I can't connect to Proxmox → [incident](incidents/2026-11-13-server-freezes.md) (fixed)
 
 ## VMs
 
-not yet
+| VM | OS | CPU | RAM | Disk | IP |
+|---|---|---|---|---|---|
+| `server-production` | Ubuntu 26.04.1 LTS | 2 cores | 4GB | 32GB | `192.168.1.201` |
+
+### server-production
+
+Runs my websites with Docker. Hostname: `web-host.home.arpa`.
+
+- Network: `vmbr0`, VirtIO
+- IP reserved on the router + DNS entry
+- Login: `ssh <user>@web-host.home.arpa`

@@ -1,6 +1,6 @@
 # 2026-11-13: Server freezes
 
-Status: open (testing)
+Status: fixed
 
 ## What happened
 - After the install, Proxmox worked for some minutes, then the connection was gone. No ping, no SSH.
@@ -92,10 +92,10 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet nomodeset nvme_core.default_ps_max_latency_us=
 
 Then the same steps: `update-grub`, `reboot`, `cat /proc/cmdline`.
 
-- **Result:** Testing now.
+- **Result:** Fixed. It ran more than 24 hours with no freeze (`uptime`: up 1 day), and it boots fine after reboot.
 
-## Next
-Now I'm watching it. I'll check again after 24 hours.
+## Fix
+After step 3 the server stopped freezing. I keep all 3 changes.
 
 
 ## Words
